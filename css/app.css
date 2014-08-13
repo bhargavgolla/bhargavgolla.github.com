@@ -1,6 +1,8 @@
 /* Flip Card */
 /* Code inspired from : http://codepen.io/johnmotyljr/pen/tkipE */
 .flip {
+    perspective: 800px;
+    -webkit-perspective: 800px;
     width: 100%;
     height: 250px;
 }
