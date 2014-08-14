@@ -13,7 +13,6 @@ function showHome(e){
 }
 
 function setCardHeights(lineHeight) {
-	console.log("Being set");
 	var exps = document.getElementsByClassName('flipExp');
 	var ports = document.getElementsByClassName('flipPort');
 	var maxHeightExp = 0;
@@ -25,15 +24,37 @@ function setCardHeights(lineHeight) {
 			maxHeightExp = temp;
 		}
 	};
+
+	// Setting Maxmimum of Portfolio cards to be same height as Exp Cards.
+	// This is done to ensure that people can read the desc properly.
+	// Else, height of portfolio cards won't go beyond three lines.
+	maxHeightPort = maxHeightExp;
+	for (var i = exps.length - 1; i >= 0; i--) {
+		temp = exps[i].getElementsByTagName('p')[0].offsetHeight + exps[i].getElementsByTagName('header')[0].offsetHeight;
+		if (maxHeightExp > temp) {
+			exps[i].getElementsByTagName('p')[0].style.marginTop = (maxHeightExp - temp)/2+"px";
+		} else {
+			exps[i].getElementsByTagName('p')[0].style.marginTop = "0px";
+		}
+	};
 	maxHeightExp = maxHeightExp*1.75/lineHeight;
 	for (var i = exps.length - 1; i >= 0; i--) {
 		exps[i].style.height = maxHeightExp+"em";
 	};
 
-	for (var i = ports.length - 1; i >= 0; i--) {
+	// Commented out code to find max portfolio card size, for reasons explained above.
+	/*for (var i = ports.length - 1; i >= 0; i--) {
 		temp = ports[i].getElementsByTagName('p')[0].offsetHeight + ports[i].getElementsByTagName('header')[0].offsetHeight;
 		if (maxHeightPort < temp) {
 			maxHeightPort = temp;
+		}
+	};*/
+	for (var i = ports.length - 1; i >= 0; i--) {
+		temp = ports[i].getElementsByTagName('p')[0].offsetHeight + ports[i].getElementsByTagName('header')[0].offsetHeight;
+		if (maxHeightPort > temp) {
+			ports[i].getElementsByTagName('p')[0].style.marginTop = (maxHeightPort - temp)/2+"px";
+		} else {
+			ports[i].getElementsByTagName('p')[0].style.marginTop = "0px";
 		}
 	};
 	maxHeightPort = maxHeightPort*1.75/lineHeight;
@@ -46,6 +67,14 @@ function setCardHeights(lineHeight) {
 $(document).ready(function(){
 	$('a.showDesc').click(showDesc);
 	$('a.showHome').click(showHome);
+	$(window).resize(function() {
+		lineHeight = 37.33;
+		if ($(window).width() < 640) {
+			lineHeight = 32.667;
+		}
+		setCardHeights(lineHeight);
+	});
+
 	// Code inspired from : http://codepen.io/johnmotyljr/pen/tkipE
 	$('.flip').on({
 	    click: function() {
@@ -57,12 +86,5 @@ $(document).ready(function(){
 		    }
 		}
 	});
-
-	$(window).resize(function() {
-		lineHeight = 37.33;
-		if ($(window).width() < 640) {
-			lineHeight = 32.667;
-		}
-		setCardHeights(lineHeight);
-	});
+	// End Code from CodePen
 });
