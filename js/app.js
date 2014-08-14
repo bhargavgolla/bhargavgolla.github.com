@@ -66,9 +66,9 @@ function setCardHeights(lineHeight) {
 
 function browserCheck() {
 	var isMSIE = /*@cc_on!@*/false; //Detects IE 10- browsers
-	var warningText = "I should warn you. I haven't really tested this on your browser!";
+	var notTestedText = " I should warn you. I haven't really tested this on your browser!";
 	if (isMSIE) {
-		var mytext=document.createTextNode(warningText);
+		var mytext=document.createTextNode(notTestedText);
 		document.getElementById("caption").appendChild(mytext);
 	}
 }
