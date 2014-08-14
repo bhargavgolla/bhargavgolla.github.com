@@ -17,30 +17,30 @@ function setCardHeights(lineHeight) {
 	var ports = document.getElementsByClassName('flipPort');
 	var maxHeightExp = 0;
 	var maxHeightPort = 0;
-	var temp = 0;
-	for (var i = exps.length - 1; i >= 0; i--) {
+	var temp = 0, i = 0;
+	for (i = exps.length - 1; i >= 0; i--) {
 		temp = exps[i].getElementsByTagName('p')[0].offsetHeight + exps[i].getElementsByTagName('header')[0].offsetHeight;
 		if (maxHeightExp < temp) {
 			maxHeightExp = temp;
 		}
-	};
+	}
 
 	// Setting Maxmimum of Portfolio cards to be same height as Exp Cards.
 	// This is done to ensure that people can read the desc properly.
 	// Else, height of portfolio cards won't go beyond three lines.
 	maxHeightPort = maxHeightExp;
-	for (var i = exps.length - 1; i >= 0; i--) {
+	for (i = exps.length - 1; i >= 0; i--) {
 		temp = exps[i].getElementsByTagName('p')[0].offsetHeight + exps[i].getElementsByTagName('header')[0].offsetHeight;
 		if (maxHeightExp > temp) {
 			exps[i].getElementsByTagName('p')[0].style.marginTop = (maxHeightExp - temp)/2+"px";
 		} else {
 			exps[i].getElementsByTagName('p')[0].style.marginTop = "0px";
 		}
-	};
+	}
 	maxHeightExp = maxHeightExp*1.75/lineHeight;
-	for (var i = exps.length - 1; i >= 0; i--) {
+	for (i = exps.length - 1; i >= 0; i--) {
 		exps[i].style.height = maxHeightExp+"em";
-	};
+	}
 
 	// Commented out code to find max portfolio card size, for reasons explained above.
 	/*for (var i = ports.length - 1; i >= 0; i--) {
@@ -48,42 +48,53 @@ function setCardHeights(lineHeight) {
 		if (maxHeightPort < temp) {
 			maxHeightPort = temp;
 		}
-	};*/
-	for (var i = ports.length - 1; i >= 0; i--) {
+	}*/
+	for (i = ports.length - 1; i >= 0; i--) {
 		temp = ports[i].getElementsByTagName('p')[0].offsetHeight + ports[i].getElementsByTagName('header')[0].offsetHeight;
 		if (maxHeightPort > temp) {
 			ports[i].getElementsByTagName('p')[0].style.marginTop = (maxHeightPort - temp)/2+"px";
 		} else {
 			ports[i].getElementsByTagName('p')[0].style.marginTop = "0px";
 		}
-	};
+	}
 	maxHeightPort = maxHeightPort*1.75/lineHeight;
-	for (var i = ports.length - 1; i >= 0; i--) {
+	for (i = ports.length - 1; i >= 0; i--) {
 		ports[i].style.height = maxHeightPort+"em";
-	};
+	}
 
+}
+
+function browserCheck() {
+	var isMSIE = /*@cc_on!@*/false; //Detects IE 10- browsers
+	var warningText = "I should warn you. I haven't really tested this on your browser!";
+	if (isMSIE) {
+		var mytext=document.createTextNode(warningText);
+		document.getElementById("caption").appendChild(mytext);
+	}
 }
 
 $(document).ready(function(){
 	$('a.showDesc').click(showDesc);
 	$('a.showHome').click(showHome);
 	$(window).resize(function() {
-		lineHeight = 37.33;
+		var lineHeight = 37.33;
 		if ($(window).width() < 640) {
 			lineHeight = 32.667;
 		}
 		setCardHeights(lineHeight);
 	});
 
+	browserCheck();
+
 	// Code inspired from : http://codepen.io/johnmotyljr/pen/tkipE
 	$('.flip').on({
-	    click: function() {
-	        $('.card', this).toggleClass('flipped');
-	    },
-	    mouseleave: function() {
-		   	if ($('.card', this).hasClass('flipped')) {
-		   	    $('.card', this).removeClass('flipped');
-		    }
+        click: function() {
+            $('.card', this).toggleClass('flipped');
+        },
+        mouseleave: function() {
+            if ($('.card', this).hasClass('flipped')) {
+                $('.card', this).removeClass('flipped');
+            }
 		}
 	});
 	// End Code from CodePen
