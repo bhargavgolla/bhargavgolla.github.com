@@ -67,7 +67,8 @@ function setCardHeights(lineHeight) {
 function browserCheck() {
 	var isMSIE = /*@cc_on!@*/false; //Detects IE 10- browsers
 	var notTestedText = " I should warn you. I haven't really tested this on your browser!";
-	if (isMSIE) {
+	var docTest = document.documentMode;
+	if (isMSIE || docTest) {
 		var mytext=document.createTextNode(notTestedText);
 		document.getElementById("caption").appendChild(mytext);
 	}
