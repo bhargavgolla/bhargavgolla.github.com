@@ -66,7 +66,7 @@ function setCardHeights(lineHeight) {
 
 function browserCheck() {
 	var isMSIE = /*@cc_on!@*/false; //Detects IE 10- browsers
-	var notTestedText = " I should warn you. I haven't really tested this on your browser!";
+	var notTestedText = " I should warn you. CSS Transforms are a little glitchy on your browser!";
 	var docTest = document.documentMode;
 	if (isMSIE || docTest) {
 		var mytext=document.createTextNode(notTestedText);
