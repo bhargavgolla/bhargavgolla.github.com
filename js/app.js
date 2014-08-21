@@ -69,8 +69,9 @@ function browserCheck() {
 	var notTestedText = " I should warn you. CSS Transforms are a little glitchy on your browser!";
 	var docTest = document.documentMode;
 	if (isMSIE || docTest) {
-		var mytext=document.createTextNode(notTestedText);
-		document.getElementById("caption").appendChild(mytext);
+		// I Still Don't trust you IE :(
+		/*var mytext=document.createTextNode(notTestedText);
+		document.getElementById("caption").appendChild(mytext);*/
 	}
 }
 
