@@ -64,15 +64,15 @@
 	<body>
 
 		<!-- Header -->
-			<div id="header" class="skel-layers-fixed">
+			<div id="header" class="skel-layers-fixed" itemscope itemtype="http://schema.org/Person">
 
 				<div class="top">
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.png" alt="Bhargav's Avatar" /></span>
-							<h1 id="title">Bhargav Golla</h1>
-							<p>Software/Web Developer.<br>Masters Student.</p>
+							<span class="image avatar48"><img itemprop="image" src="images/avatar.png" alt="Bhargav's Avatar" /></span>
+							<h1 id="title" itemprop="name">Bhargav Golla</h1>
+							<p itemprop="jobTitle">Software/Web Developer.<br>Masters Student.</p>
 						</div>
 
 					<!-- Nav -->
@@ -105,11 +105,13 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="http://github.com/bhargavgolla" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="http://linkedin.com/in/bhargavgolla" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="http://twitter.com/bhargavgolla" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="http://bit.ly/bgwindowsp" target="_blank" class="icon fa-windows"><span class="label">Windows Phone Dev</span></a></li>
-							<li><a href="mailto:mail@bhargavgolla.com?subject=Hey%20Bhargav" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li style="display:none;"><a rel="me" itemprop="url" href="http://bhargavgolla.com" target="_blank" class="icon fa-desktop"><span class="label">Website</span></a></li>
+							<li><a rel="author" itemprop="url" href="http://google.com/+BhargavGolla?rel=author" target="_blank" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+							<li><a rel="me" itemprop="url" href="http://github.com/bhargavgolla" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a rel="me" itemprop="url" href="http://linkedin.com/in/bhargavgolla" target="_blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a rel="me" itemprop="url" href="http://twitter.com/bhargavgolla" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a rel="me" itemprop="url" href="http://bit.ly/bgwindowsp" target="_blank" class="icon fa-windows"><span class="label">Windows Phone Dev</span></a></li>
+							<li><a itemprop="email" href="mailto:mail@bhargavgolla.com?subject=Hey%20Bhargav" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 				
 				</div>
@@ -149,19 +151,19 @@
 								<div class="4u">
 									<article class="item item1">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Research Assistant</h3>
+														<h3 itemprop="jobTitle">Research Assistant</h3>
 													</header>
 													<p>2014 Jan - Current<br>
-													School of Computing, Clemson<br>
+													<span itemprop="name">School of Computing, Clemson</span><br>
 													Java and C<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Working on Amulet, an mHealth device, and am being mentored by Dr. Jacob Sorber at School of Computing. Developing the application isolation framework of Amulet using a software-based approach.<br>
+													<p itemprop="description">Working on Amulet, an mHealth device, and am being mentored by Dr. Jacob Sorber at School of Computing. Developing the application isolation framework of Amulet using a software-based approach.<br>
 													External Links: <a href="http://amulet-project.org/" target="_blank">Amulet</a><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
 													</p>
@@ -173,19 +175,19 @@
 								<div class="4u">
 									<article class="item item2">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Student Intern</h3>
+														<h3 itemprop="jobTitle">Student Intern</h3>
 													</header>
 													<p>2014 Jan - 2014 Aug<br>
-													CCIT, Clemson University<br>
+													<span itemprop="name">CCIT, Clemson University</span><br>
 													JS, Python, Go and MongoDB<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Developed an SSL certificate validity checker service to streamline the process of maintaining SSL certificates of all sub-domains at Clemson. Development was primarily on Python, Python Web Framework Bottle, MongoDB and JS framework, Dojo.<br>
+													<p itemprop="description">Developed an SSL certificate validity checker service to streamline the process of maintaining SSL certificates of all sub-domains at Clemson. Development was primarily on Python, Python Web Framework Bottle, MongoDB and JS framework, Dojo.<br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
 													</p>
 												</div>
@@ -196,19 +198,19 @@
 								<div class="4u">
 									<article class="item item3">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Summer Research Intern</h3>
+														<h3 itemprop="jobTitle">Summer Research Intern</h3>
 													</header>
 													<p>2014 June - 2014 Jul<br>
-													OrangeFS, Clemson University<br>
+													<span itemprop="name">OrangeFS, Clemson University</span><br>
 													C and Unix<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Mentored by Dr. Walt Ligon, Associate Professor, Dept. of Electrical and Computer Engineering, Clemson University, over the summer on my project on rewriting utilities for his Parallel Virtual File System (PVFS), OrangeFS. Worked on porting the pvfs utilities to a POSIX compliant library.<br>
+													<p itemprop="description">Mentored by Dr. Walt Ligon, Associate Professor, Dept. of Electrical and Computer Engineering, Clemson University, over the summer on my project on rewriting utilities for his Parallel Virtual File System (PVFS), OrangeFS. Worked on porting the pvfs utilities to a POSIX compliant library.<br>
 													External Links: <a href="http://bit.ly/reuposterbgolla" target="_blank">Poster on work done</a><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
 													</p>
@@ -222,19 +224,19 @@
 								<div class="4u">
 									<article class="item item4">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card"itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Apps Dev Programmer Analyst 1</h3>
+														<h3 itemprop="jobTitle">Apps Dev Programmer Analyst 1</h3>
 													</header>
 													<p>2013 Jun - 2013 Dec<br>
-													Citicorp Services India Ltd., Pune<br>
+													<span itemprop="name">Citicorp Services India Ltd., Pune</span><br>
 													Java and Flex<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Worked on developing a web portal for Credit Approval, used by credit managers at CitiBank, using Apache Flex, Java and Java frameworks Spring and Hibernate.<br>
+													<p><span itemprop="description">Worked on developing a web portal for Credit Approval, used by credit managers at CitiBank, using Apache Flex, Java and Java frameworks Spring and Hibernate.</span><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
 													</p>
 												</div>
@@ -245,19 +247,19 @@
 								<div class="4u">
 									<article class="item item5">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Google Summer of Code Intern</h3>
+														<h3 itemprop="jobTitle">Google Summer of Code Intern</h3>
 													</header>
 													<p>2013 May - 2013 Sep<br>
-													Apache Software Foundation<br>
+													<span itemprop="name">Apache Software Foundation</span><br>
 													JS, Phonegap and Maven<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Chosen for Google Summer of Code 2013 to work on Apache Isis, a domain-driven Java app development framework. Developed a JavaScript based viewer for Apache Isis, using Phonegap and jQuery Mobile.<br>
+													<p><span itemprop="description">Chosen for Google Summer of Code 2013 to work on Apache Isis, a domain-driven Java app development framework. Developed a JavaScript based viewer for Apache Isis, using Phonegap and jQuery Mobile.</span><br>
 													External Links: <a href="http://bit.ly/gsocbg13" target="_blank">Details</a><br>
 													<a href="http://bit.ly/bgisisjs" target="_blank">Repo</a><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
@@ -270,19 +272,19 @@
 								<div class="4u">
 									<article class="item item6">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Developer Intern</h3>
+														<h3 itemprop="jobTitle">Developer Intern</h3>
 													</header>
 													<p>2012 Jul - 2013 May<br>
-													Exotel Techcom Pvt. Ltd.<br>
+													<span itemprop="name">Exotel Techcom Pvt. Ltd.</span><br>
 													Android, Java and PHP<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Selected to work with Exotel, India’s fastest growing startup in Cloud Telephony. Architected Exotel Mobile, an Android app for Exotel’s customers to use. Provided Exotel’s features in a mobile. Used by all sales personnel of Exotel’s clientele, over 1000 SMEs. Recruited as Freelancer on the same project (until May 2013) for the remarkable success the app achieved.<br>
+													<p><span itemprop="description">Selected to work with Exotel, India’s fastest growing startup in Cloud Telephony. Architected Exotel Mobile, an Android app for Exotel’s customers to use. Provided Exotel’s features in a mobile. Used by all sales personnel of Exotel’s clientele, over 1000 SMEs. Recruited as Freelancer on the same project (until May 2013) for the remarkable success the app achieved.</span><br>
 													External Links: <a href="http://bit.ly/bgexotel" target="_blank">App page</a><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
 													</p>
@@ -296,19 +298,19 @@
 								<div class="4u">
 									<article class="item item7">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Intern and Code committer</h3>
+														<h3 itemprop="jobTitle">Intern and Code committer</h3>
 													</header>
 													<p>2012 May - 2012 Dec<br>
-													Apache Software Foundation<br>
+													<span itemprop="name">Apache Software Foundation</span><br>
 													JS, jQuery Mobile and Phonegap<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Chosen for Google Summer of Code 2012 to work on PhotArk – then Incubating project at ASF aimed at building open source photo gallery applications.Developed PhotArk Mobile’s web albums feature that aggregates all photos a user uploaded to social networking sites. Introduced Phonegap framework to PhotArk. Provided regular patches to other features developed by fellow developers. Enlisted as a Code Committer at PhotArk project for the meticulous work done.<br>
+													<p><span itemprop="description">Chosen for Google Summer of Code 2012 to work on PhotArk – then Incubating project at ASF aimed at building open source photo gallery applications.Developed PhotArk Mobile’s web albums feature that aggregates all photos a user uploaded to social networking sites. Introduced Phonegap framework to PhotArk. Provided regular patches to other features developed by fellow developers. Enlisted as a Code Committer at PhotArk project for the meticulous work done.</span><br>
 													External Links: <a href="http://bit.ly/gsocbg12" target="_blank">Details</a><br>
 													<a href="http://bit.ly/bgphotark" target="_blank">Repo</a><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
@@ -321,19 +323,19 @@
 								<div class="4u">
 									<article class="item item8">
 										<div class="flip flipExp">
-											<div class="card">
+											<div class="card" itemscope itemtype="http://schema.org/Organization">
 												<div class="exp home">
 													<header>
-														<h3>Summer Intern</h3>
+														<h3 itemprop="jobTitle">Summer Intern</h3>
 													</header>
 													<p>2011 May - 2011 Jul<br>
-													L V Prasad Eye Institute<br>
+													<span itemprop="name">L V Prasad Eye Institute</span><br>
 													ASP.NET and SQL Server<br>
 													<a href="#" class="showDesc icon fa-rotate-right"><span class="label">Description</span></a>
 													</p>
 												</div>
 												<div class="exp desc">
-													<p>Developed an asset tracking web application using Visual Studio 2010 for Front end design in ASP. NET and SQL Server 2008 for backend development.<br>
+													<p><span itemprop="description">Developed an asset tracking web application using Visual Studio 2010 for Front end design in ASP. NET and SQL Server 2008 for backend development.</span><br>
 													<a href="#" class="showHome icon fa-rotate-left"><span class="label">Home</span></a>
 													</p>
 												</div>
