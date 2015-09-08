@@ -1,5 +1,2 @@
-url: https://bhargavgolla.com   # with the https protocol
-enforce_ssl: bhargavgolla.com   # without any protocol
-
 gems:
 - jekyll-sitemap
